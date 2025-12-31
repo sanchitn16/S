@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year ❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 90%;
+        cursor: pointer;
+    }
+
+    img {
+        max-width: 320px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .text {
+        font-size: 22px;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    .hint {
+        margin-top: 15px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container" onclick="nextStep()">
+    <img id="image" src="./WhatsApp Image 2025-12-31 at 10.49.58 PM.jpeg">
+    <div id="content" class="hint">LETSSGOOOOO ❤️</div>
+</div>
+
+<script>
+    let step = 0;
+
+    const images = [
+        "WhatsApp Image 2025-12-31 at 10.49.58 PM.jpeg",
+        "WhatsApp Image 2025-12-31 at 10.49.59 PM (1).jpeg",
+        "WhatsApp Image 2025-12-31 at 10.49.59 PM (2).jpeg",
+        "WhatsApp Image 2025-12-31 at 10.49.59 PM.jpeg"
+    ];
+
+    const letter1 = `
+   Happiesttt Neww yearrr myyy bby gurllll myy lil princessss 🥹♥️myyyy cheeekuuu myyyy bby gurlllll ..
+    this new year i have the bestesttttt gurllll with me and jiske sath ab forever hr new pr hona h 🥹♥️ 
+    … 2025 mai sabse bestest kuch mujhe mila sabse bestttt mere sath kuch hua that is just to have you .. 
+    you areee myyy boht chotu cutu ki princesss .. boht jyada pyariii dhyan rkhne vali itna pyar krne vali bachiii 
+    .. you are really like the girlll I have ever dreamt for . And is now with me till forever .. 
+    I promise and for the year i have my resolution to always loveee youuuu ,care for you always to be there with you
+     ,being successful with you, not to change for you, to do anything for you ,always to respect you ,always to irritate you
+     ,always to make you smile , and forever to be with youuuuu… i promisee mai apna bestt krta rhunga ki apke face pr apki 
+     pyari si smile hmesha bni rhe .. Meri last wish to waheguru  for 2025 is justttt to have youu forever with me and always
+      to keep you healthy and strong ki kisi ki nazar bhi apki health pr affect naa dalebaki meri bby gurll boht strong H 😘…
+       I loveeee youu soo soo soooo muchhhhh myyy bby gurll 🥹😘.. Happiest new yearrr myyyy princesss 🥹😘😍😘😘😘😘😘 
+       boht sari kissssi 😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘
+       😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘
+    `;
+
+    const letter2 = `
+    
+    My Lil Princess ❤️<br><br>
+    Every moment with you feels special,<br>
+    Every smile of yours makes my world brighter.<br>
+    Thank you for being my happiness,<br>
+    My strength, and my home.<br><br>
+    Another year begins,<br>
+    And all I wish for is us 💕<br><br>
+    I want to laugh with you,<br>
+    Grow with you,<br>
+    Fight the world with you by my side.<br><br>
+    No matter what comes,<br>
+    I choose you. Always. 💖
+    I promise to love you more with every new year ✨
+    `;
+
+    function nextStep() {
+        step++;
+
+        if (step < images.length) {
+            document.getElementById("image").src = images[step];
+            document.getElementById("content").innerHTML = "LETSSGOOOOO 💕";
+        }
+        else if (step === images.length) {
+            document.getElementById("image").style.display = "none";
+            document.getElementById("content").className = "text";
+            document.getElementById("content").innerHTML = letter1;
+        }
+        else if (step === images.length + 1) {
+            document.getElementById("content").innerHTML = letter2;
+        }
+        else {
+            document.getElementById("content").innerHTML =
+                "<h1>🎉 Happy New Year My Love ❤️ 🎉</h1><p>Forever & Always ✨</p>";
+        }
+    }
+</script>
+
+</body>
+</html>
